@@ -43,3 +43,28 @@ a{
     text-align: center;
     margin-top: 40px;
 }
+/* レスポンシブ対応デザイン */
+@media screen and (max-width: 768px){
+    .product-list{
+        gap: 15px;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+#footer{
+    display: block;
+    text-align: center;
+    padding-bottom: 40px ;
+}
+.menu{
+    margin-bottom: 20px;
+    justify-content: center;
+}
+.product-list p{
+ font-size: 0.8;
+}
+
+.site-title img{
+    height: 24px;
+    width: auto;
+}
+}
