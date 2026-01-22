@@ -1,4 +1,9 @@
 @charset "UTF-8";
+/* リンクの線を消す */
+a{
+    text-decoration: none;
+    color: black;
+}
 /* メインの画像をグリットの配置にする */
 .product-list{
     display:  grid;
@@ -30,4 +35,11 @@
 
 .menu li{
     margin-right: 15px;
+}
+
+.link-text{
+    display: block; 
+    /* ↑矢印Aタグ内の内容を移動させるときブロックとして扱う */
+    text-align: center;
+    margin-top: 40px;
 }
