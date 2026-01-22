@@ -58,9 +58,10 @@ a{
 .menu{
     margin-bottom: 20px;
     justify-content: center;
+    margin-top: 20px;
 }
 .product-list p{
- font-size: 0.8;
+font-size: 0.8;
 }
 
 .site-title img{
