@@ -43,6 +43,52 @@ a{
     text-align: center;
     margin-top: 40px;
 }
+/* item1 デザイン */
+
+.site-title img{
+    margin-top: 30px;
+    width: 70%;
+    margin-bottom: 20px;
+}
+
+.page-title{
+    font-size: 15px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+.item{
+    display: flex;
+}
+
+.item-text{
+    width: 30%;
+}
+
+.item-text p{
+    margin-bottom: 20px;
+}
+
+.item-img img{
+    width: 400px;
+    margin-right: 80px;
+}
+
+.link-text{
+    margin-bottom: 10%;
+}
+
+/* テーブルの文字を細く */
+
+.item table th{
+    font-weight: normal;
+}
+
+.item table td{
+    padding-left: 1rem;
+}
+
 /* レスポンシブ対応デザイン */
 @media screen and (max-width: 768px){
     .product-list{
