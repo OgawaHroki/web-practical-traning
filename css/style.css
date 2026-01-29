@@ -1,128 +1,142 @@
 @charset "UTF-8";
+
 /* リンクの線を消す */
-a{
+a {
     text-decoration: none;
     color: black;
 }
+
 /* メインの画像をグリットの配置にする */
-.product-list{
-    display:  grid;
+.product-list {
+    display: grid;
     gap: 35px;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     list-style: none;
 }
+
 /* メインの画像をグリットの配置にする */
-.product-list img{
-    width: 100%;       
+.product-list img {
+    width: 100%;
     /* height: auto;      
     display: block;    */
 }
+
 .wrapper {
     width: 100%;
     max-width: 1360px;
     margin: 0 auto;
     padding: 0 40px;
 }
-#header{
+
+#header {
     display: flex;
     justify-content: space-between;
 }
 
-.menu{
+.menu {
     list-style: none;
     display: flex;
 }
 
-.menu li{
+.menu li {
     margin-right: 15px;
 }
 
-.link-text{
-    display: block; 
+.link-text {
+    display: block;
     /* ↑矢印Aタグ内の内容を移動させるときブロックとして扱う */
     text-align: center;
     margin-top: 40px;
 }
+
 /* item1 デザイン */
 
-.site-title img{
+.site-title img {
     margin-top: 30px;
     width: 70%;
     margin-bottom: 20px;
 }
 
-.page-title{
+.page-title {
     font-size: 15px;
     margin-top: 40px;
     margin-bottom: 30px;
     font-weight: normal;
 }
 
-.item{
+.item {
     display: flex;
 }
 
-.item-text{
+.item-text {
     width: 30%;
 }
 
-.item-text p{
+.item-text p {
     margin-bottom: 20px;
 }
 
-.item-img img{
+.item-img img {
     width: 400px;
     margin-right: 80px;
 }
 
-.link-text{
+.link-text {
     margin-bottom: 10%;
 }
 
 /* テーブルの文字を細く */
 
-.item table th{
+.item table th {
     font-weight: normal;
 }
 
-.item table td{
+.item table td {
     padding-left: 1rem;
 }
 
+/* company */
+
+
+
+
 /* レスポンシブ対応デザイン */
-@media screen and (max-width: 768px){
-    .product-list{
+@media screen and (max-width: 768px) {
+    .product-list {
         gap: 15px;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
-#footer{
-    display: block;
-    text-align: center;
-    padding-bottom: 40px ;
-}
-.menu{
-    margin-bottom: 20px;
-    justify-content: center;
-    margin-top: 20px;
-}
-.product-list p{
-font-size: 0.8;
-}
+    #footer {
+        display: block;
+        text-align: center;
+        padding-bottom: 40px;
+    }
 
-.site-title img{
-    height: 24px;
-    width: auto;
-}
-/* itemデザイン */
-.item {
-    flex-direction: column;
-    display: block;
-} 
+    .menu {
+        margin-bottom: 20px;
+        justify-content: center;
+        margin-top: 20px;
+    }
 
-.item .item-img,
-.item .item-text{
-    width: 100%;
-}
+    .product-list p {
+        font-size: 0.8;
+    }
+
+    .site-title img {
+        height: 24px;
+        width: auto;
+    }
+
+    /* itemデザイン */
+    .item {
+        flex-direction: column;
+        display: block;
+    }
+
+    .item .item-img,
+    .item .item-text {
+        width: 100%;
+    }
 
 }
