@@ -96,7 +96,47 @@ a {
 }
 
 /* company */
+#company {
+    max-width: 600px;
 
+}
+
+#company .info {
+    max-width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 13px;
+}
+
+#company .info th,
+#company .info td {
+    font-weight: normal;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 20px 10px;
+}
+
+#company .info th {
+    width: 20%;
+    max-width: 150%;
+    padding-right: 20px;
+}
+
+#company .info td {
+    padding-left: 50px;
+    padding-right: 200px;
+}
+
+#company .info tr:last-child th,
+#company .info tr:last-child td {
+    border-bottom: none;
+}
+
+/* グーグルマップ */
+#company .map {
+    filter: grayscale(1);
+    margin-bottom: 20%;
+}
 
 
 
@@ -139,4 +179,21 @@ a {
         width: 100%;
     }
 
+    /* company */
+    #company .info th,
+    #company .info td {
+        display: block;
+        padding-right: 0;
+    }
+
+    #company .info th {
+        border: none;
+        margin-left: 10px;
+        padding-bottom: 0;
+    }
+
+    #company .info td {
+        padding-left: 20px;
+        padding-top: 5px;
+    }
 }
