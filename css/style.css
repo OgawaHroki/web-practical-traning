@@ -1,5 +1,94 @@
 @charset "UTF-8";
 
+
+/* ハンバーガーメニュー */
+.menyu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #e0e0e0;
+    transition: left 0.3s ease;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+.menyu.open {
+    left: 0;
+}
+
+.hamburger {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.menyu a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+}
+
+.menyu ul {
+    list-style: none;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    /* margin: 5px 0; */
+    transition: 0.4s;
+    position: absolute;
+}
+
+.hamburger span:nth-of-type(1) {
+    top: 0;
+}
+
+.hamburger span:nth-of-type(2) {
+    top: 10px;
+}
+
+.hamburger span:nth-of-type(3) {
+    top: 20px;
+}
+
+/* ×にするアニメーション */
+.hamburger.active span:nth-of-type(1) {
+    top: 10px;
+    transform: rotate(45deg);
+    background-color: white;
+}
+
+.hamburger.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-of-type(3) {
+    top: 10px;
+    transform: rotate(-45deg);
+    background-color: white;
+}
+
+/* ボタンの当たり判定 */
+.hamburger::after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+}
+
 /* リンクの線を消す */
 a {
     text-decoration: none;
@@ -55,6 +144,7 @@ a {
     margin-top: 30px;
     width: 70%;
     margin-bottom: 20px;
+
 }
 
 .page-title {
