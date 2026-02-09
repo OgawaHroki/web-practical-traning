@@ -12,4 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // ボタン自身の 'active' クラスを付け外しする
         hamburgerButton.classList.toggle("active");
     })
-})
+});
+
+
+
