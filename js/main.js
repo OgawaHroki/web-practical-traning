@@ -14,5 +14,17 @@ document.addEventListener("DOMContentLoaded", function () {
     })
 });
 
+// JavaScriptで中身を複製して、切れ目のない無限ループを作る処理
+document.addEventListener('DOMContentLoaded', () => {
+    // この中に処理を書く
+    // 1. トラック要素を取得
+    const track = document.getElementById('track');
 
+    // 2. 今あるカードの中身を全部コピーする
+    const clone = track.innerHTML;
 
+    // 3. トラックの後ろにコピーを追加する
+    // これで [カード1, 2, 3...][カード1, 2, 3...] と2セット並ぶ状態になる
+    track.innerHTML = clone + clone + clone + clone;
+
+});
