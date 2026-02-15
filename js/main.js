@@ -1,3 +1,21 @@
+window.addEventListener('load', () => {
+
+    const loader = document.getElementById('loading-screen');
+
+    // 【注意】本来は setTimeout は不要ですが、
+    // コンテンツが軽いと一瞬で消えてしまうため、
+    // デモ用にわざと1.5秒待ってから消しています。
+    setTimeout(() => {
+        // 'loaded' クラスを追加してCSSのopacity:0を発動させる
+        loader.classList.add('loaded');
+    }, 1500);
+
+    // 本番環境で即座に消したい場合は setTimeout を削除して
+    // loader.classList.add('loaded');
+    // だけを記述してください。
+});
+
+
 // ページの準備が整ったら動くようにする
 document.addEventListener("DOMContentLoaded", function () {
     // 1. まず、使う部品に名前をつけておく（変数に入れる）
