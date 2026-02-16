@@ -390,12 +390,7 @@ body {
 
 /* item1 デザイン */
 
-.site-title img {
-    margin-top: 30px;
-    width: 70%;
-    margin-bottom: 20px;
 
-}
 
 .page-title {
     font-size: 15px;
@@ -434,6 +429,168 @@ body {
 .item table td {
     padding-left: 1rem;
 }
+
+/*--------------------------------------
+  カード型_01
+--------------------------------------*/
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 横並び（2列） */
+    gap: 40px;
+    /* カード同士の間隔 */
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* スマホ対応 */
+@media screen and (max-width: 768px) {
+    .card-list {
+        grid-template-columns: 1fr;
+        /* スマホでは縦1列 */
+        gap: 30px;
+    }
+}
+
+/* --- カード個別の設定 --- */
+.l-wrapper_01 {
+    width: 100%;
+    margin: 0;
+    height: 100%;
+    /* 親要素の高さいっぱいに広げる */
+    transition: all 0.3s ease;
+}
+
+.l-wrapper_01:nth-child(odd) {
+    transform: rotate(-2deg);
+}
+
+.l-wrapper_01:nth-child(even) {
+    transform: rotate(2deg);
+}
+
+.l-wrapper_01:hover {
+    /* 角度を0に戻しつつ、上に少し浮く動きをつける */
+    transform: rotate(0deg) translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    /* ホバーしたカードが一番手前に来るようにする */
+}
+
+
+.card_01 {
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .16);
+    color: #212121;
+    text-decoration: none;
+
+    /* カード内の要素（画像・本文・ボタン）を縦並びに整理 */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ヘッダー（タイトル＋画像） */
+.card__header_01 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.card__title_01 {
+    color: #8b7355;
+    padding: 1rem 1.5rem 0;
+    font-size: 1.6rem;
+    order: 1;
+    /* 画像の下に表示 */
+    margin-bottom: 0.6rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.card__thumbnail_01 {
+    margin: 0;
+    order: 0;
+    /* タイトルの上に表示 */
+    width: 100%;
+    overflow: hidden;
+    background-color: #fff;
+    /* 背景色を白に（イラスト用） */
+}
+
+/* 【重要修正】画像の設定 */
+.l-wrapper_01 img,
+.card__image_01 {
+    width: 100%;
+    /* ↓ここで高さを固定することでタイトルの位置を揃えます */
+    height: 250px;
+
+    /* ↓画像を変形させずに枠内に収める設定（線画イラストにおすすめ） */
+    object-fit: contain;
+
+    /* ↓余分なマージンを削除して中央寄せ */
+    margin: 0 auto;
+    display: block;
+}
+
+/* 本文エリア */
+.card__body_01 {
+    padding: 0 1.5rem;
+    /* ここが伸び縮みしてボタンを下に押しやる */
+    flex-grow: 1;
+}
+
+.card__text2_01 {
+    font-size: .9rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+
+    /* 3行制限（長すぎる場合は...で省略） */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+/* フッター（ボタンエリア） */
+.card__footer_01 {
+    padding: 1rem;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    margin-top: auto;
+}
+
+.card__text_01 {
+    font-size: .8rem;
+    text-align: center;
+    text-decoration: none;
+    padding-bottom: 0;
+    margin: 0;
+}
+
+.button_01 {
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color .3s ease-in-out;
+    text-align: center;
+}
+
+.button_01.-compact {
+    padding: .5rem 2rem;
+    border-radius: .25rem;
+    background-color: #4f96f6;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.button_01.-compact:hover,
+.button_01.-compact:focus {
+    background-color: #6bb6ff;
+}
+
 
 /* company */
 #company {
