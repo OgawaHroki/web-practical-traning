@@ -1,17 +1,132 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <title>Furniture Design</title>
-        <meta name="description" content="家具の紹介ページ">
-        <meta name="viewport" content="width=device=width,initial-scale=1">
-        <link rel="icon" href="img/favicon.ico">
-        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-        <link rel="stylesheet" href="css/style.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="js/main.js"></script>
-    </head>
-    <body>
-        
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Furniture Design</title>
+    <meta name="description" content="家具の紹介ページ">
+    <meta name="viewport" content="width=device=width,initial-scale=1">
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <!-- ブートストラップ -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 【追加】Swiper JSの読み込み -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <div class="colorchangeanime_bg">
+
+        <nav class="menyu">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul>
+                <li><a href="index.html">PRODUCTS</a></li>
+                <li><a href="abput.html">ABOUT</a></li>
+                <li><a href="item1.html">MY FAVORITES</a></li>
+                <li><a href="comoany.html">COMPANY</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="products.html">写真</a></li>
+            </ul>
+        </nav>
+        <div class="about">
+            <h1>album</h1>
+            <P>今まで旅行や遊びに行った時の写真</P>
+
+        </div>
+
+
+        <ul class="card-list products-arubamu">
+            <li>
+                <a>
+                    <!-- 変更: css-carousel-slider を swiper クラスに変更 -->
+                    <div class="swiper mySwiper">
+                        <!-- 変更: slide-wrap 構造を swiper-wrapper に変更 -->
+                        <div class="swiper-wrapper">
+                            <!-- ダミー画像を入れています。元のパス: img/新しいフォルダー/IMG_1041 (1).jpg -->
+                            <div class="swiper-slide"><img
+                                    src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=600&q=80"
+                                    alt=""></div>
+                            <!-- ダミー画像を入れています。元のパス: img/新しいフォルダー/IMG_1042.jpg -->
+                            <div class="swiper-slide"><img
+                                    src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=600&q=80"
+                                    alt=""></div>
+                            <div class="swiper-slide"><img
+                                    src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=600&q=80"
+                                    alt=""></div>
+                        </div>
+                        <!-- 【追加】ページネーション（点々）が必要ならコメントアウトを外す -->
+                        <div class="swiper-pagination">
+                            <p>テキストテキスト</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+
+            <!-- 【修正】アイテム 2 -->
+            <li>
+                <a>
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img
+                                    src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=600&q=80"
+                                    alt=""></div>
+                            <div class="swiper-slide"><img
+                                    src="https://images.unsplash.com/photo-1567016432923-38f2cc875b62?auto=format&fit=crop&w=600&q=80"
+                                    alt=""></div>
+                            <div class="swiper-slide"><img
+                                    src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=600&q=80"
+                                    alt=""></div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+
+            <!-- 【修正】アイテム 3 -->
+            <li>
+                <a>
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img
+                                    src="https://images.unsplash.com/photo-1505693416388-c0346836b898?auto=format&fit=crop&w=600&q=80"
+                                    alt=""></div>
+                            <div class="swiper-slide"><img
+                                    src="https://images.unsplash.com/photo-1540932296757-5e2ed8d20d80?auto=format&fit=crop&w=600&q=80"
+                                    alt=""></div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+
+            <!-- 【修正】アイテム 4 -->
+            <li>
+                <a>
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img
+                                    src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=600&q=80"
+                                    alt=""></div>
+                            <div class="swiper-slide"><img
+                                    src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=600&q=80"
+                                    alt=""></div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+</body>
+
 </html>

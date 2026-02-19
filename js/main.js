@@ -1,19 +1,27 @@
 window.addEventListener('load', () => {
 
     const loader = document.getElementById('loading-screen');
+    //カルーセルのコンテナを取得
+    const carousel = document.querySelector('.carousel-container');
 
     // 【注意】本来は setTimeout は不要ですが、
     // コンテンツが軽いと一瞬で消えてしまうため、
     // デモ用にわざと1.5秒待ってから消しています。
     setTimeout(() => {
-        // 'loaded' クラスを追加してCSSのopacity:0を発動させる
+        // ローディング画面を消す
         loader.classList.add('loaded');
-    }, 1500);
 
-    // 本番環境で即座に消したい場合は setTimeout を削除して
-    // loader.classList.add('loaded');
-    // だけを記述してください。
+        // ★追加：ローディングが消えるタイミングで、カルーセルに「出現クラス」をつける
+        if (carousel) {
+            carousel.classList.add('appear');
+        }
+    }, 1500);
 });
+
+// 本番環境で即座に消したい場合は setTimeout を削除して
+// loader.classList.add('loaded');
+// だけを記述してください。
+
 
 
 // ページの準備が整ったら動くようにする
@@ -45,4 +53,41 @@ document.addEventListener('DOMContentLoaded', () => {
     // これで [カード1, 2, 3...][カード1, 2, 3...] と2セット並ぶ状態になる
     track.innerHTML = clone + clone + clone + clone;
 
+});
+
+// about　上から下へのアニメーション
+document.addEventListener("DOMContentLoaded", function () {
+    // 監視対象：タイムラインのセクション
+    const timeline = document.querySelector('.timeline');
+    // アニメーションさせる各アイテム
+    const timelineItems = document.querySelectorAll('.timeline-item');
+
+    // 監視の設定（画面の10%が見えたら発火するように少し甘めに設定）
+    const options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.1
+    };
+
+    // 監視機能の作成
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            // 画面に入ったとき
+            if (entry.isIntersecting) {
+                // 各アイテムを順番に表示する
+                timelineItems.forEach((item, index) => {
+                    setTimeout(() => {
+                        item.classList.add('show');
+                    }, index * 200); // 0.2秒ずつ遅らせて表示（順番に降りてくる演出）
+                });
+                // 一度発火したら監視を終了（何度も動かないようにする）
+                observer.unobserve(entry.target);
+            }
+        });
+    }, options);
+
+    // 監視を開始
+    if (timeline) {
+        observer.observe(timeline);
+    }
 });
