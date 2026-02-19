@@ -91,3 +91,20 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(timeline);
     }
 });
+
+// アルバム（Swiper）を動かすための設定
+document.addEventListener('DOMContentLoaded', function () {
+    const swiper = new Swiper('.mySwiper', {
+        loop: true,
+        // ★追加: 自動再生の設定
+        autoplay: {
+            delay: 5500, // 2.5秒ごとに切り替え
+            disableOnInteraction: false, // 触っても自動再生を止めない
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        autoHeight: true, // 高さを自動調整
+    });
+});

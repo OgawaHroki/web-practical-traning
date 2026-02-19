@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Furniture Design</title>
-    <meta name="description" content="家具の紹介ページ">
+    <title>Hiroki Ogawa Portfolio</title>
+    <meta name="description" content="小川寛綺のポートフォリオサイト">
     <meta name="viewport" content="width=device=width,initial-scale=1">
-    <link rel="icon" href="img/favicon.ico">
+    <link rel="icon" href="">
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <!-- ブートストラップ -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -42,9 +42,7 @@
         <div class="about">
             <h1>album</h1>
             <P>今まで旅行や遊びに行った時の写真</P>
-
         </div>
-
 
         <ul class="card-list products-arubamu">
             <li>
@@ -53,22 +51,22 @@
                     <div class="swiper mySwiper">
                         <!-- 変更: slide-wrap 構造を swiper-wrapper に変更 -->
                         <div class="swiper-wrapper">
-                            <!-- ダミー画像を入れています。元のパス: img/新しいフォルダー/IMG_1041 (1).jpg -->
-                            <div class="swiper-slide"><img
-                                    src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=600&q=80"
-                                    alt=""></div>
-                            <!-- ダミー画像を入れています。元のパス: img/新しいフォルダー/IMG_1042.jpg -->
-                            <div class="swiper-slide"><img
-                                    src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=600&q=80"
-                                    alt=""></div>
-                            <div class="swiper-slide"><img
-                                    src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=600&q=80"
-                                    alt=""></div>
+
+                            <div class="swiper-slide"><img src="img\新しいフォルダー\IMG_1041.jpg" alt="">
+                                <p class="slide-text">道頓堀 グリコ</p>
+                            </div>
+
+                            <div class="swiper-slide"><img src="img\新しいフォルダー\IMG_1042.jpg" alt="">
+                                <p class="slide-text">道頓堀 かに道楽</p>
+                            </div>
+                            <div class="swiper-slide"><img src="img\アルバム\IMG_1043.jpg" alt="">
+                                <p class="slide-text">通天閣</p>
+                            </div>
                         </div>
                         <!-- 【追加】ページネーション（点々）が必要ならコメントアウトを外す -->
-                        <div class="swiper-pagination">
-                            <p>テキストテキスト</p>
-                        </div>
+                        <!-- <div class="swiper-pagination">
+                        </div> -->
+                        <p class="slide-text">大阪</p>
                     </div>
                 </a>
             </li>
@@ -78,16 +76,32 @@
                 <a>
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img
-                                    src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=600&q=80"
-                                    alt=""></div>
-                            <div class="swiper-slide"><img
-                                    src="https://images.unsplash.com/photo-1567016432923-38f2cc875b62?auto=format&fit=crop&w=600&q=80"
-                                    alt=""></div>
-                            <div class="swiper-slide"><img
-                                    src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=600&q=80"
-                                    alt=""></div>
+                            <div class="swiper-slide"><img src="img\アルバム\IMG_0982.jpg" alt="">
+                                <p class="slide-text">清水寺</p>
+                            </div>
+                            <div class="swiper-slide"><img src="img\アルバム\IMG_0985_Original.jpg" alt="">
+                                <p class="slide-text">清水寺 三重塔 (コントラスト調整)</p>
+                            </div>
+                            <div class="swiper-slide"><img src="img\新しいフォルダー\IMG_1649.JPG" alt="">
+                                <p class="slide-text">金閣寺</p>
+                            </div>
+                            <div class="swiper-slide"><img src="img\新しいフォルダー\IMG_1650.JPG" alt="">
+                                <p class="slide-text">金閣寺</p>
+                            </div>
+                            <div class="swiper-slide"><img src="img\新しいフォルダー\IMG_1652.JPG" alt="">
+                                <p class="slide-text">渡月橋</p>
+                            </div>
+                            <div class="swiper-slide"><img src="img\新しいフォルダー\IMG_1654.JPG" alt="">
+                                <p class="slide-text">嵐山竹林の小径</p>
+                            </div>
+                            <div class="swiper-slide"><img src="img\新しいフォルダー\IMG_1653.JPG" alt="">
+                                <p class="slide-text">嵐山竹林の小径</p>
+                            </div>
+                            <div class="swiper-slide"><img src="img\新しいフォルダー\IMG_1655.JPG" alt="">
+                                <p class="slide-text">嵐山竹林の小径</p>
+                            </div>
                         </div>
+                        <p class="slide-text">京都</p>
                     </div>
                 </a>
             </li>
@@ -97,13 +111,18 @@
                 <a>
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img
-                                    src="https://images.unsplash.com/photo-1505693416388-c0346836b898?auto=format&fit=crop&w=600&q=80"
-                                    alt=""></div>
-                            <div class="swiper-slide"><img
-                                    src="https://images.unsplash.com/photo-1540932296757-5e2ed8d20d80?auto=format&fit=crop&w=600&q=80"
-                                    alt=""></div>
+                            <div class="swiper-slide"><img src="img\新しいフォルダー\Image (3).jpg" alt="">
+                                <p class="slide-text">東京スカイツリー</p>
+                            </div>
+                            <div class="swiper-slide"><img src="img\新しいフォルダー\Image (5).jpg" alt="">
+                                <p class="slide-text">東京タワー</p>
+                            </div>
+                            <div class="swiper-slide"><img src="img\新しいフォルダー\Image (4).jpg" alt="">
+                                <p class="slide-text">浅草　宝蔵門<br>
+                                    五重塔</p>
+                            </div>
                         </div>
+                        <p class="slide-text">東京</p>
                     </div>
                 </a>
             </li>
@@ -113,14 +132,21 @@
                 <a>
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img
-                                    src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=600&q=80"
-                                    alt=""></div>
-                            <div class="swiper-slide"><img
-                                    src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=600&q=80"
-                                    alt=""></div>
+                            <div class="swiper-slide"><img src="img\新しいフォルダー\IMG_1644.JPG" alt="">
+                                <p class="slide-text">鵜戸神宮</p>
+                            </div>
+                            <div class="swiper-slide"><img src="img\新しいフォルダー\IMG_1645.JPG" alt="">
+                                <p class="slide-text">鵜戸神宮</p>
+                            </div>
+                            <div class="swiper-slide"><img src="img\新しいフォルダー\IMG_1647.JPG" alt="">
+                                <p class="slide-text">綾の照葉大吊橋</p>
+                            </div>
+                            <div class="swiper-slide"><img src="img\新しいフォルダー\IMG_1646.JPG" alt="">
+                                <p class="slide-text">関之尾の滝</p>
+                            </div>
                         </div>
                     </div>
+                    <p class="slide-text">宮崎</p>
                 </a>
             </li>
 
