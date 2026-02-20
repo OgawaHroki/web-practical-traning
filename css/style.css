@@ -399,6 +399,53 @@ body {
     }
 }
 
+/* 動かしたい見出しへの指示 */
+.midasi {
+    /* bounceInというアニメーションを、0.8秒かけて、1回だけ実行する */
+    animation: bounceIn 1s ease-out 1;
+
+    /* アニメーションが終わった後、そのままの状態を保つための設定 */
+    animation-fill-mode: forwards;
+
+    /* ▼▼ ここを追加：ローディングが終わるまで待つ時間（例：2秒待つ） ▼▼ */
+    animation-delay: 2s;
+
+    /* ▼▼ ここを追加：待っている間は透明にして見えないようにしておく ▼▼ */
+    opacity: 0;
+}
+
+/* ボールが弾む動きの設計図 */
+@keyframes bounceIn {
+    0% {
+        /* 1. 上空からスタート（透明で見えない状態から、少し縦長になって落ちてくる） */
+        transform: translateY(-200px) scale(0.8, 1.2);
+        opacity: 0;
+    }
+
+    50% {
+        /* 2. 地面に激突！（横にグシャッとへこむ） */
+        transform: translateY(0) scale(1.3, 0.6);
+        opacity: 1;
+    }
+
+    70% {
+        /* 3. 少し跳ね返る（上にポーンと浮く） */
+        transform: translateY(-30px) scale(0.9, 1.1);
+    }
+
+    85% {
+        /* 4. もう一度地面に落ちて、軽くへこむ */
+        transform: translateY(0) scale(1.1, 0.9);
+    }
+
+    100% {
+        /* 5. ピタッと元の形・元の位置に戻る */
+        transform: translateY(0) scale(1, 1);
+        opacity: 1;
+    }
+}
+
+
 /* item1 デザイン */
 
 .page-title {
@@ -618,43 +665,25 @@ body {
 /* contactのデザイン */
 #contact-form {
     max-width: 600px;
-
+    margin: 0 auto;
 }
 
 #contact-form input {
     width: 100%;
-    border: 1px solid #dcdbdb;
+    border: 1px solid #000000;
     padding: 10px;
-}
-
-#contact-form select {
-    width: 100%;
-    border: 1px solid #dcdbdb;
-    padding: 10px;
+    background-color: #ddd;
+    margin-bottom: 30px;
 }
 
 #contact-form textarea {
     width: 100%;
-    border: 1px solid #dcdbdb;
+    border: 1px solid #000000;
     padding: 10px;
+    background-color: #ddd;
+    margin-bottom: 30px;
 }
 
-/* contact-form 内のチェックボックスとラジオボタン専用の調整 */
-#contact-form input[type="checkbox"],
-#contact-form input[type="radio"] {
-
-    /* width: 100% などの共通指定を打ち消し、
-     チェックボックス本来のサイズに戻す */
-    width: auto;
-
-    /* 他の input に指定している padding を無効化し、
-     余白によるズレを防ぐ */
-    padding: 0;
-
-    /* テキスト入力用の枠線が
-     チェックボックスに適用されないようにする */
-    border: 0;
-}
 
 /* aboutのデザイン */
 html,

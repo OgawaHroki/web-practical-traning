@@ -4,6 +4,7 @@ window.addEventListener('load', () => {
     //カルーセルのコンテナを取得
     const carousel = document.querySelector('.carousel-container');
 
+    // ローディング画面
     // 【注意】本来は setTimeout は不要ですが、
     // コンテンツが軽いと一瞬で消えてしまうため、
     // デモ用にわざと1.5秒待ってから消しています。
@@ -23,7 +24,7 @@ window.addEventListener('load', () => {
 // だけを記述してください。
 
 
-
+// ハンバーガーメニュー
 // ページの準備が整ったら動くようにする
 document.addEventListener("DOMContentLoaded", function () {
     // 1. まず、使う部品に名前をつけておく（変数に入れる）
