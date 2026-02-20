@@ -3,6 +3,9 @@
 body {
     /* システムフォントではなくWebフォントを指定 */
     font-family: "Noto Sans JP", sans-serif;
+
+    /* ▼ iPhoneで引っ張った時の白い隙間をなくす対策 */
+    background-color: #d4c4a8;
 }
 
 /* ローディング画面 */
@@ -378,6 +381,9 @@ body {
 .colorchangeanime_bg {
     width: 100%;
     min-height: 100vh;
+    /* ▼ Safari対策！メニューバーに合わせて自動調整してくれる最新の単位 */
+    min-height: 100dvh;
+
 
     /* 1. 白、ベージュ、濃い茶色と、はっきり違う3色を指定します */
     background: linear-gradient(45deg, #ffffff, #d4c4a8, #8b7355);
