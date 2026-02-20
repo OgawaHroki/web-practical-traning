@@ -325,10 +325,13 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
+    gap: 15px;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     font-weight: bold;
     text-decoration: none;
+    text-align: center;
     /* リンクの下線を消す */
     color: #333;
     transition: transform 0.3s;
@@ -954,6 +957,9 @@ body {
         mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
         -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
     }
+
+
+
 
     /* カードサイズを少し小さく（必要であれば） */
     .card {
