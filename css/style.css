@@ -253,7 +253,7 @@ body {
     margin: 0;
     padding: 20px;
     /* font-family: sans-serif; */
-    background-color: white;
+    /* background-color: white; */
 }
 
 .carousel-container {
@@ -381,7 +381,7 @@ body {
 .colorchangeanime_bg {
     width: 100%;
     min-height: 100vh;
-    /* ▼ Safari対策！メニューバーに合わせて自動調整してくれる最新の単位 */
+
     min-height: 100dvh;
 
 
