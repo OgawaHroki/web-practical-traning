@@ -6,6 +6,11 @@ body {
 
     /* ▼ iPhoneで引っ張った時の白い隙間をなくす対策 */
     background-color: #d4c4a8;
+
+    margin: 0;
+    padding: 20px;
+    /* font-family: sans-serif; */
+    /* background-color: white; */
 }
 
 /* ローディング画面 */
@@ -249,12 +254,6 @@ a {
 }
 
 /* カルーセル */
-body {
-    margin: 0;
-    padding: 20px;
-    /* font-family: sans-serif; */
-    /* background-color: white; */
-}
 
 .carousel-container {
     width: 100%;
