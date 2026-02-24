@@ -721,9 +721,20 @@ a {
 }
 
 .aikon {
-    display: flex;
-    align-items: flex-end;
-    margin-left: 10%;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+
+    /* ▼ 追加：パソコン用の左の余白を消す！これのせいで右にズレていました */
+    margin-left: 0 !important;
+
+    /* ▼ 変更：完全に「左寄せ」にする指示（center から flex-start に変更） */
+    justify-content: flex-start !important;
+
+    gap: 15px;
+
+    /* ▼ 追加：左端にくっつきすぎる場合は、この数字（10px）を増やして微調整してください */
+    padding-right: 10px;
 }
 
 .aikon h1 {
